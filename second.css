@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+}
+
+body {
+  background: linear-gradient(135deg, #647faa, #637b8b);
+  color: #251919;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.main {
+  width: 100%;
+  max-width: 1100px;
+  background: rgba(186, 100, 100, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(45, 29, 29, 0.3);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+.current-location,
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+#location-text {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+input[type="text"] {
+  flex: 0.5;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #2980b9;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.weather-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#toggle-temp {
+  margin: 0 auto 20px;
+  display: block;
+  background-color: #fff;
+  color: #2980b9;
+  font-size: 15px;
+}
+#toggle-temp:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.day {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.day img {
+  width: 60px;
+  height: 60px;
+  margin: 10px 0;
+}
+
+.day h4 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.day p,
+.day pre,
+.day h6 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .current-location,
+  .box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .forecast {
+    grid-template-columns: 1fr;
+  }
+}
